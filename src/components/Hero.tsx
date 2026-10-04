@@ -152,10 +152,10 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick }) => {
           ============================================== */}
       <motion.div
         style={{ y: textTranslateY }}
-        className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-12 my-auto flex flex-col items-center text-center justify-center pointer-events-none"
+        className="relative z-10 w-full max-w-7xl mx-auto px-3 sm:px-6 md:px-12 my-auto flex flex-col items-center text-center justify-center pointer-events-none"
       >
         {/* Line 1: BUILT TO BE */}
-        <div className="overflow-hidden leading-tight">
+        <div className="w-full max-w-full overflow-hidden px-4 sm:px-8 py-2 -my-2 flex justify-center leading-tight">
           <motion.h1
             initial={{ opacity: 0, y: '100%', filter: 'blur(16px)' }}
             animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
@@ -164,23 +164,23 @@ export const Hero: React.FC<HeroProps> = ({ onExploreClick }) => {
               delay: 1.4,
               ease: [0.16, 1, 0.3, 1],
             }}
-            className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-display font-bold tracking-[0.14em] md:tracking-[0.18em] uppercase text-[#f5f7fa] drop-shadow-[0_10px_35px_rgba(0,0,0,0.8)]"
+            className="inline-block px-2 text-[clamp(1.5rem,6.6vw,7rem)] font-display font-bold tracking-[0.08em] sm:tracking-[0.12em] md:tracking-[0.16em] uppercase text-[#f5f7fa] drop-shadow-[0_10px_35px_rgba(0,0,0,0.8)] select-none whitespace-nowrap will-change-transform"
           >
             BUILT TO BE
           </motion.h1>
         </div>
 
         {/* Line 2: REMEMBERED. */}
-        <div className="overflow-hidden leading-tight mt-1 md:mt-2">
+        <div className="w-full max-w-full overflow-hidden px-4 sm:px-8 py-2 -my-2 flex justify-center leading-tight mt-1 md:mt-2">
           <motion.h1
-            initial={{ opacity: 0, y: '100%', filter: 'blur(20px)' }}
+            initial={{ opacity: 0, y: '100%', filter: 'blur(16px)' }}
             animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
             transition={{
               duration: 1.8,
               delay: 1.9,
               ease: [0.16, 1, 0.3, 1],
             }}
-            className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-display font-bold tracking-[0.14em] md:tracking-[0.18em] uppercase text-transparent bg-clip-text bg-gradient-to-b from-white via-zinc-200 to-zinc-500 drop-shadow-[0_15px_40px_rgba(0,0,0,0.9)]"
+            className="inline-block px-3 text-[clamp(1.35rem,6.2vw,6.5rem)] font-display font-bold tracking-[0.07em] sm:tracking-[0.11em] md:tracking-[0.16em] uppercase text-transparent bg-clip-text bg-gradient-to-b from-white via-zinc-200 to-zinc-400 drop-shadow-[0_15px_35px_rgba(0,0,0,0.9)] select-none whitespace-nowrap will-change-transform pb-1"
           >
             REMEMBERED.
           </motion.h1>
