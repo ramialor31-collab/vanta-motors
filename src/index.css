@@ -1,0 +1,124 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #030304;
+  color: #f0f2f5;
+  font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Custom Film Grain Noise Texture */
+.bg-noise {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.035'/%3E%3C/svg%3E");
+}
+
+/* Luxury Text Mask Animation Utility */
+.text-mask {
+  overflow: hidden;
+  display: inline-block;
+}
+
+/* Ultra-clean custom scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: #030304;
+}
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #52525b;
+}
+
+/* Architectural Radial Glow */
+.ambient-beam {
+  background: radial-gradient(ellipse 60% 40% at 50% 0%, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0) 70%);
+}
+
+.ambient-floor-reflection {
+  background: linear-gradient(180deg, rgba(3, 3, 4, 0) 0%, rgba(3, 3, 4, 0.85) 60%, #030304 100%);
+}
+
+/* Vignette border */
+.vignette-layer {
+  box-shadow: inset 0 0 120px rgba(0, 0, 0, 0.9);
+}
+
+/* Font helpers */
+.font-display {
+  font-family: 'Syncopate', sans-serif;
+}
+.font-mono {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Custom Cursor: hide default system cursor only on devices with precision hover */
+@media (hover: hover) and (pointer: fine) {
+  html, body, a, button, input, select, textarea, [role="button"], label {
+    cursor: none !important;
+  }
+}
+
+/* Custom Cursor Ripple Animation */
+@keyframes cursorRipple {
+  0% {
+    width: 14px;
+    height: 14px;
+    margin-left: -7px;
+    margin-top: -7px;
+    opacity: 0.9;
+    transform: scale(0.5);
+  }
+  100% {
+    width: 44px;
+    height: 44px;
+    margin-left: -22px;
+    margin-top: -22px;
+    opacity: 0;
+    transform: scale(1.2);
+  }
+}
+
+.animate-cursorRipple {
+  animation: cursorRipple 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes cursorFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fadeIn {
+  animation: cursorFadeIn 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
